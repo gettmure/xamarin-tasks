@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cart.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.2*" />
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="#6100ed" VerticalOptions="Start" Padding="24" CornerRadius="0" Grid.Row="0">
+            <Label Text="Cart" HorizontalTextAlignment="Left" TextColor="White" FontSize="25"/>
+        </Frame>
+
+        <StackLayout Grid.Row="1">
+            <Frame OutlineColor="Gray" CornerRadius="10" BackgroundColor="Transparent" VerticalOptions="Center" HeightRequest="50">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.3*" />
+                        <ColumnDefinition Width="0.6*" />
+                        <ColumnDefinition Width="0.1*" />
+                        <ColumnDefinition Width="0.3*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Rectangle 
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center" 
+                        Fill="DarkGreen" 
+                        RadiusX="60" 
+                        RadiusY="60" 
+                        WidthRequest="50" 
+                        HeightRequest="50" 
+                        Grid.Column="0"
+                    />
+
+                    <Label
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center" 
+                        Text="Name" 
+                        TextColor="Black" 
+                        FontSize="25" 
+                        Grid.Column="1"
+                    />
+
+                    <Label
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        Text="0" 
+                        TextColor="Black" 
+                        FontSize="25" 
+                        Grid.Column="2"
+                    />
+
+                    <Frame HorizontalOptions="Center" 
+                       VerticalOptions="Center"
+                       OutlineColor="Black" 
+                       BackgroundColor="Transparent"
+                       Grid.Column="3">
+
+                        <Label
+                            Text="X" 
+                            TextColor="Black"
+                            FontSize="25"
+                        />
+
+                    </Frame>
+                </Grid>
+            </Frame>
+        </StackLayout>
+
+        <Frame CornerRadius="0" Grid.Row="2">
+            <Button 
+                Text="Order"
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150" 
+                CornerRadius="10"
+            />
+        </Frame>
+    </Grid>
+
+</ContentPage>
